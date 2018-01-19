@@ -246,7 +246,7 @@ DEPENDENCIES
   omniauth (~> 1.6)
   omniauth-facebook (~> 4.0)
   paperclip (~> 5.1.0)
-  pg
+  pg (~> 1.0.0)
   puma (~> 3.0)
   rails (~> 5.0.3)
   ransack (~> 1.7)
