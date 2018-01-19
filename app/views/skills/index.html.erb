@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-3">
+		<ul class="sidebar-list">
+			<li class="sidebar-item"><%= link_to "Your Listings", skills_path, class: "sidebar-link active" %></li>
+			<li class="sidebar-item"><%= link_to "Your Costumers", your_costumers_path, class: "sidebar-link" %></li>
+			<li class="sidebar-item"><%= link_to "Your Hirings", your_hirings_path, class: "sidebar-link" %></li>
+		</ul>
+	</div>
+
+	<div class="col-md-9">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Listings
+			</div>
+			<div class="panel-body">
+				<% @skills.each do |skill| %>
+					<div class="row">
+						<div class="col-md-2">
+							<%= image_tag skill.cover_photo(:thumb) %>
+						</div>
+						<div class="col-md-7">
+							<h4><%= skill.skill_name %></h4>
+						</div>
+						<div class="col-md-3 right">
+							<%= link_to "Update", listing_skill_path(skill), class: "btn btn-form" %>
+						</div>
+					</div>
+						<br/>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

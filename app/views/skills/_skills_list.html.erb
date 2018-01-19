@@ -1,0 +1,26 @@
+<% skills.each do |skill| %>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+					<div class="panel-heading preview">
+						<%= image_tag skill.cover_photo(:medium) %>
+					</div>
+
+					<div class="panel-body">
+						<%= link_to skill.skill_name, skill %><br/>
+						<%= skill.category_type %> - <%= pluralize(skill.day_hour, "hour") %>
+						<div id="star_<%= skill.id %>"></div> <%= pluralize(skill.average_rating, "review") %>
+					</div>
+			</div>
+		</div>
+
+
+<script>
+ $('#star_<%= skill.id %>').raty({
+	path: '/assets',
+	readOnly: true,
+	score: <%= skill.average_rating %>
+  });
+</script>
+
+<% end %>
+

@@ -1,0 +1,37 @@
+<div class="row">
+	<div class="col-md-3">
+		<%= render 'skill_menu' %>
+	</div>
+	<div class="col-md-9">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Description
+		</div>
+
+		<div class="panel-body">
+			<div class="container">
+			<%= form_for @skill do |f| %>
+				<div class="row">
+					<div class="form-group">
+					<label>Skill name</label>
+					<%= f.text_field :skill_name, placeholder: "What are you offering?", class: "form-control", required: true %>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group">
+					<label>Summary</label>
+					<%= f.text_area :summary, placeholder: "A summary of what are you offering.", class: "form-control", required: true %>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<%= f.submit "Save", class: "btn btn-form" %>
+				</div>
+			<% end %>
+			</div>
+		</div>
+
+	</div>
+	</div>
+</div>

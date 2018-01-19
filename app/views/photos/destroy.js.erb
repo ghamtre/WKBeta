@@ -1,0 +1,10 @@
+$('#photos').html("<%= j render 'photos_list' %>")
+<% if @skill.photos.blank? %>
+	$('#photo_check').hide();
+<% end %>
+
+<% if !@skill.active && !@skill.price.blank? && !@skill.skill_name.blank? && !@skill.photos.blank? && !@skill.portfolio.blank? %>
+	$('#publish_button').attr('disabled', false);
+<% else %>
+	$('#publish_button').attr('disabled', true);
+<% end %>

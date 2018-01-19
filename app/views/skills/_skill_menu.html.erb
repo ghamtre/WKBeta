@@ -1,0 +1,81 @@
+<ul class="sidebar-list">
+	<li class="sidebar-item">
+	<%= link_to "Listing", listing_skill_path, class: "sidebar-link active" %>
+	<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
+	</li>
+
+	<li class="sidebar-item">
+	<%= link_to "Pricing", pricing_skill_path, class: "sidebar-link active" %>
+	<%if !@skill.price.blank? %>
+	<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
+	<% end %>
+	</li>
+
+	<li class="sidebar-item">
+	<%= link_to "Description", description_skill_path, class: "sidebar-link active" %>
+	<%if !@skill.skill_name.blank? %>
+	<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
+	<% end %>
+	</li>
+
+	<li class="sidebar-item">
+	<%= link_to "Photos", photo_upload_skill_path, class: "sidebar-link active" %>
+	<%if !@skill.photos.blank? %>
+	<span id="photo_check" class="pull-right text-babu"><i class="fa fa-check"></i></span>
+	<% end %>
+	</li>
+
+	<li class="sidebar-item">
+	<%= link_to "Perks", perks_skill_path, class: "sidebar-link active" %>
+	<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
+	</li>
+
+	<li class="sidebar-item">
+	<%= link_to "Location", location_skill_path, class: "sidebar-link active" %>
+	<%if !@skill.portfolio.blank? %>
+	<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
+	<% end %>
+	</li>
+</ul>
+<br/>
+
+<% is_ready = !@skill.active && !@skill.price.blank? && !@skill.skill_name.blank? && !@skill.photos.blank? && !@skill.portfolio.blank? %>
+
+<%= form_for @skill do |f| %>
+	<%= f.hidden_field :active, value: true %>
+	<%= f.submit "Publish", id: "publish_button", class: "btn btn-normal btn-block", disabled: !is_ready %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

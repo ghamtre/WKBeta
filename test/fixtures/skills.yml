@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_type: MyString
+  skill_type: MyString
+  perk: 1
+  day_hour: 1
+  skill_name: MyString
+  summary: MyText
+  portfolio: MyString
+  is_skype: false
+  is_ip: false
+  is_discord: false
+  is_steam: false
+  is_fi: false
+  price: 1
+  active: false
+  user: one
+
+two:
+  category_type: MyString
+  skill_type: MyString
+  perk: 1
+  day_hour: 1
+  skill_name: MyString
+  summary: MyText
+  portfolio: MyString
+  is_skype: false
+  is_ip: false
+  is_discord: false
+  is_steam: false
+  is_fi: false
+  price: 1
+  active: false
+  user: two

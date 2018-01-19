@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Suprise us with your skill!
+	</div>
+	<div class="panel-body">
+		<div class="container">
+		<%= form_for @skill do |f| %>
+
+			<div class="row">
+				<div class="col-md-4 select">
+				<div class="form-group">
+					<label>Skill Category</label>
+					<%= f.select :category_type, [["CS:GO","CS:GO"],["LeagueOfLegends","LeagueOfLegends"],["Overwatch","Overwatch"],["Warcraft","Warcraft"]],
+					id: "category_type", prompt: "Select...", class: "form-control" %>
+					</div>
+				</div>
+
+				<div class="col-md-4 select">
+				<div class="form-group">
+					<label>Purpose</label>
+					<%= f.select :skill_type, [["Improvement","Improvement"],["Basics","Basics"],["Free Time","Free Time"],["Problem-solving","Problem-solving"]],
+					id: "skill_type", prompt: "Select...", class: "form-control" %>
+					</div>
+				</div>
+
+				<div class="col-md-4 select">
+				<div class="form-group">
+					<label>Duration</label>
+					<%= f.select :day_hour, [["4 Hours","4 Hours"],["6 Hours","6 Hours"],["8 Hours","8 Hours"]],
+					id: "day_hour", prompt: "Select...", class: "form-control" %>
+					</div>
+				</div>
+
+			</div>
+
+			<div><%= f.submit "Submit", class: "btn btn-normal" %></div>
+
+		<% end %>
+
+		</div>
+	</div>
+</div>
