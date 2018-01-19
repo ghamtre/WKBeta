@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   	@skills = Skill.where(active: true).limit(3)
   end
 
+  def policy
+    
+  end
+
   def search
   	if params[:search].present? && params[:search].strip != ""
   		session[:loc_search] = params[:search]
